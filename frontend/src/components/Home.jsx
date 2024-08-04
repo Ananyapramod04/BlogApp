@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/details')
+    axios.get('http://localhost:3002/details')
       .then((res) => {
         setCards(res.data);
       })
@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   const deleteData = (id) => {
-    axios.delete(`http://localhost:3001/removedetails/${id}`)
+    axios.delete(`http://localhost:3002/removedetails/${id}`)
       .then((res) => {
         alert('Data deleted');
         setCards(rows.filter(row => row._id !== id));

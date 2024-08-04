@@ -28,8 +28,8 @@ const Add = () => {
     e.preventDefault(); // Prevents the default form submission
 
     const url = existingData
-      ? `http://localhost:3001/update/${existingData._id}`
-      : "http://localhost:3001/add";
+      ? `http://localhost:3002/update/${existingData._id}`
+      : "http://localhost:3002/add";
 
     const method = existingData ? 'put' : 'post';
 
